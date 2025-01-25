@@ -1,10 +1,10 @@
 [gd_scene load_steps=5 format=3 uid="uid://cmdcq31ium8wj"]
 
-[ext_resource type="PackedScene" uid="uid://boivfejw0gbxb" path="res://characters/player_cat.tscn" id="1_733ax"]
-[ext_resource type="Texture2D" uid="uid://bpv2mr4jaaa5x" path="res://asset/tf_atlantis_updated2020/tf_atlantis_tiles.png" id="2_wqm1v"]
+[ext_resource type="PackedScene" uid="uid://boivfejw0gbxb" path="res://characters/player_cat.tscn" id="1_7iofl"]
+[ext_resource type="Texture2D" uid="uid://bpv2mr4jaaa5x" path="res://asset/tf_atlantis_updated2020/tf_atlantis_tiles.png" id="2_oilgl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mk5h5"]
-texture = ExtResource("2_wqm1v")
+texture = ExtResource("2_oilgl")
 2:1/0 = 0
 3:1/0 = 0
 4:1/0 = 0
@@ -786,9 +786,9 @@ texture = ExtResource("2_wqm1v")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_mk5h5")
 
-[node name="GameLevel" type="Node2D"]
+[node name="Level1" type="Node2D"]
 
-[node name="PlayerCat" parent="." instance=ExtResource("1_733ax")]
+[node name="PlayerCat" parent="." instance=ExtResource("1_7iofl")]
 position = Vector2(328, 224)
 
 [node name="TileMap" type="TileMap" parent="."]
