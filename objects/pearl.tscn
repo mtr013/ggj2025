@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://b8yp1b6tt810c"]
+[gd_scene load_steps=5 format=3 uid="uid://b8yp1b6tt810c"]
 
 [ext_resource type="Texture2D" uid="uid://dsb57ct1o1t11" path="res://asset/tf_atlantis_updated2020/pearl.png" id="1_8wrxo"]
 [ext_resource type="Script" path="res://objects/pearl.gd" id="1_d28r7"]
+[ext_resource type="AudioStream" uid="uid://b4mcqg8colb4t" path="res://asset/audio/Big Egg collect 1.wav" id="3_ux363"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1bls7"]
 radius = 5.0
@@ -14,5 +15,8 @@ texture = ExtResource("1_8wrxo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_1bls7")
+
+[node name="Pearl_Hit" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_ux363")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

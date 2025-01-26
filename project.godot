@@ -24,7 +24,7 @@ window/stretch/mode="canvas_items"
 
 [gui]
 
-theme/custom_font="res://asset/Sprout Lands - UI Pack - Basic pack/fonts/pixelFont-7-8x14-sproutLands.ttf"
+theme/custom_font="res://asset/font/pixelFont-7-8x14-sproutLands.ttf"
 
 [input]
 

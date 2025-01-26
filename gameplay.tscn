@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cc377rpwp2swb"]
+[gd_scene load_steps=4 format=3 uid="uid://cc377rpwp2swb"]
 
 [ext_resource type="PackedScene" uid="uid://cmdcq31ium8wj" path="res://levels/level1.tscn" id="1_todmd"]
 [ext_resource type="Texture2D" uid="uid://dsb57ct1o1t11" path="res://asset/tf_atlantis_updated2020/pearl.png" id="2_kqowb"]
+[ext_resource type="AudioStream" uid="uid://bpnurqbrfevaq" path="res://asset/audio/Warmth.ogg" id="3_1kf78"]
 
 [node name="Gameplay" type="Node2D"]
 
@@ -32,3 +33,9 @@ stretch_mode = 5
 [node name="Label" type="Label" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
 text = "0"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_1kf78")
+volume_db = -30.0
+autoplay = true
+parameters/looping = true
