@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://cc377rpwp2swb"]
+
+[ext_resource type="PackedScene" uid="uid://cmdcq31ium8wj" path="res://levels/level1.tscn" id="1_todmd"]
+[ext_resource type="Texture2D" uid="uid://dsb57ct1o1t11" path="res://asset/tf_atlantis_updated2020/pearl.png" id="2_kqowb"]
+
+[node name="Gameplay" type="Node2D"]
+
+[node name="Level1" parent="." instance=ExtResource("1_todmd")]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 577.0
+offset_right = 640.0
+offset_bottom = 40.0
+grow_horizontal = 0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_kqowb")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "0"

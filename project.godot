@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="GGJ2025"
-run/main_scene="res://levels/level1.tscn"
+run/main_scene="res://gameplay.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://icon.svg"
 
@@ -21,6 +21,10 @@ window/size/viewport_width=640
 window/size/viewport_height=360
 window/size/mode=2
 window/stretch/mode="canvas_items"
+
+[gui]
+
+theme/custom_font="res://asset/Sprout Lands - UI Pack - Basic pack/fonts/pixelFont-7-8x14-sproutLands.ttf"
 
 [input]
 
