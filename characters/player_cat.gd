@@ -6,10 +6,11 @@ extends CharacterBody2D
 @onready var animation_tree = $AnimationTree
 @onready var pearl_label = get_node("/root/Gameplay/MarginContainer/HBoxContainer/Label")
 
-var pearl_counter = 0
+var pearl_counter = null
 
 func _ready():
 	update_animation_parameters(starting_direction)
+	pearl_counter = pearl_label.text.to_int()
 
 func _physics_process(_delta):
 	# Get input direction
@@ -34,7 +35,6 @@ func update_animation_parameters(move_input : Vector2):
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Pearl"):
 		set_pearl(pearl_counter + 1)
-		print(pearl_counter)
 				
 	if area.is_in_group("Clam"):
 		get_tree().reload_current_scene()
