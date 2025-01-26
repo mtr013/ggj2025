@@ -1,7 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://boivfejw0gbxb"]
+[gd_scene load_steps=16 format=3 uid="uid://boivfejw0gbxb"]
 
 [ext_resource type="Script" path="res://characters/player_cat.gd" id="1_5cb5l"]
 [ext_resource type="Texture2D" uid="uid://dcqr4ky47dnkd" path="res://asset/Sprout Lands - Sprites - Basic pack/Characters/Basic Charakter Spritesheet-edited.png" id="2_3jlgm"]
+[ext_resource type="PackedScene" uid="uid://bkm8loqg88w7c" path="res://next_level/next_level.tscn" id="3_2b27f"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_36dhp"]
 radius = 3.5
@@ -88,7 +89,7 @@ radius = 9.0
 [node name="PlayerCat" type="CharacterBody2D"]
 script = ExtResource("1_5cb5l")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." groups=["Player"]]
 texture = ExtResource("2_3jlgm")
 hframes = 4
 vframes = 4
@@ -108,9 +109,13 @@ tree_root = SubResource("AnimationNodeStateMachine_dxkge")
 anim_player = NodePath("../AnimationPlayer")
 parameters/Idle/blend_position = Vector2(0, 0)
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." groups=["Player"]]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
 shape = SubResource("CircleShape2D_gqvqg")
+
+[node name="NextLevel" parent="." instance=ExtResource("3_2b27f")]
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

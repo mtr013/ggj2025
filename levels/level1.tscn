@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://cmdcq31ium8wj"]
+[gd_scene load_steps=8 format=3 uid="uid://cmdcq31ium8wj"]
 
 [ext_resource type="PackedScene" uid="uid://boivfejw0gbxb" path="res://characters/player_cat.tscn" id="1_7iofl"]
 [ext_resource type="Texture2D" uid="uid://bpv2mr4jaaa5x" path="res://asset/tf_atlantis_updated2020/tf_atlantis_tiles.png" id="2_oilgl"]
 [ext_resource type="PackedScene" uid="uid://b8yp1b6tt810c" path="res://objects/pearl.tscn" id="3_27clo"]
 [ext_resource type="PackedScene" uid="uid://iffcqwhjo2oe" path="res://objects/bubbles.tscn" id="4_k1ukh"]
+[ext_resource type="PackedScene" uid="uid://bkm8loqg88w7c" path="res://next_level/next_level.tscn" id="5_3mg1u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mk5h5"]
 texture = ExtResource("2_oilgl")
@@ -826,3 +827,6 @@ z_index = 2
 position = Vector2(313, 218)
 frame_progress = 0.519931
 speed_scale = 1.5
+
+[node name="NextLevel" parent="." instance=ExtResource("5_3mg1u")]
+position = Vector2(328, 133)

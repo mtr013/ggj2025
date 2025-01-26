@@ -35,6 +35,9 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Pearl"):
 		set_pearl(pearl_counter + 1)
 		print(pearl_counter)
+				
+	if area.is_in_group("Clam"):
+		get_tree().reload_current_scene()
 
 func set_pearl(new_pearl_count: int) -> void:
 	pearl_counter = new_pearl_count

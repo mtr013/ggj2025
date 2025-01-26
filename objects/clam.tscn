@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://chvuny876qwhc"]
+
+[ext_resource type="Script" path="res://objects/clam.gd" id="1_03pm8"]
+[ext_resource type="Texture2D" uid="uid://sqdkdykos7f5" path="res://asset/tf_atlantis_updated2020/clam_open.png" id="2_lvosx"]
+[ext_resource type="Texture2D" uid="uid://cjglgugi7prvc" path="res://asset/tf_atlantis_updated2020/clam_closed.png" id="3_oe8u6"]
+[ext_resource type="AudioStream" uid="uid://cftqmj4nncati" path="res://asset/audio/Bubble 1.wav" id="4_3vsx6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ohyxh"]
+radius = 7.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qgsx2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_oe8u6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_lvosx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.5
+}]
+
+[node name="Clam" type="Node2D"]
+
+[node name="Clam" type="Area2D" parent="." groups=["Clam"]]
+script = ExtResource("1_03pm8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clam" groups=["Clam"]]
+shape = SubResource("CircleShape2D_ohyxh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Clam"]
+sprite_frames = SubResource("SpriteFrames_qgsx2")
+frame_progress = 0.34189
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Clam"]
+stream = ExtResource("4_3vsx6")
+
+[connection signal="area_entered" from="Clam" to="Clam" method="_on_area_entered"]
