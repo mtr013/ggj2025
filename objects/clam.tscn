@@ -32,9 +32,10 @@ shape = SubResource("CircleShape2D_ohyxh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Clam"]
 sprite_frames = SubResource("SpriteFrames_qgsx2")
+autoplay = "default"
 frame_progress = 0.34189
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Clam"]
+[node name="Clam_Hit" type="AudioStreamPlayer" parent="Clam"]
 stream = ExtResource("4_3vsx6")
 
 [connection signal="area_entered" from="Clam" to="Clam" method="_on_area_entered"]
