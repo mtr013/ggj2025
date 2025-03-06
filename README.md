@@ -39,7 +39,7 @@ A huge thank you to the talented creators who made this game possible:
 
 ---
 
-## 🎨 **Diversifiers**
+## � **Diversifiers**
 - **Easy-read**: Designed for accessibility and readability.
 - **Old school**: A nostalgic vibe with retro-inspired elements.
 - **Tranquility**: A calming and relaxing gameplay experience.
@@ -53,9 +53,9 @@ A huge thank you to the talented creators who made this game possible:
 
 ## 👥 **Contributors**
 Thank you to our amazing team:
-- **Karis Koo**
-- **Mia Tran**
-- **Keerthana Kumar**
+- [**Karis Koo**](https://github.com/kariskoo) 🐾
+- [**Mia Tran**](https://github.com/mtr013) 🌟
+- [**Keerthana Kumar**](https://github.com/keerthanagkkumar) ✨
 
 ---
 
