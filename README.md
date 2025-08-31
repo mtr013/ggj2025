@@ -1,6 +1,6 @@
-# Global Game Jam 2025
+# Global Game Jam 2025 – The Adventures of Pawbbles
 
-## The Adventures of Pawbbles
+### Description
 
 Follow Pawbbles as he embarks on a journey to find a lost treasure that will reunite him with his mama who was taken away by the Clamtrons.
 
